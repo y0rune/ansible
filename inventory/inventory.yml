@@ -1,0 +1,6 @@
+all:
+  hosts:
+    centos:
+      ansible_connection: ssh
+      ansible_host: 172.30.171.143
+      ansible_user: root
