@@ -1,7 +1,11 @@
 # VMs
 all:
   hosts:
-    centos:
+    srv1:
       ansible_connection: ssh
       ansible_host: 172.30.171.143
+      ansible_user: root
+    srv2:
+      ansible_connection: ssh
+      ansible_host: 172.30.163.24
       ansible_user: root
