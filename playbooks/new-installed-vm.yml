@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - include_tasks: centos-enable-epal.yml
+    - include_tasks: check-iptables.yml
+    - include_tasks: centos-update.yml
+    - include_tasks: change-password.yml

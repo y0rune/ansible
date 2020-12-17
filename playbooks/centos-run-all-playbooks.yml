@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+    - include_tasks: enable-epal.yml
+    - include_tasks: centos-update.yml
