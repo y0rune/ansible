@@ -3,9 +3,9 @@ all:
   hosts:
     srv1:
       ansible_connection: ssh
-      ansible_host: 172.30.171.143
+      ansible_host: 172.21.21.11
       ansible_user: root
     srv2:
       ansible_connection: ssh
-      ansible_host: 172.30.163.24
+      ansible_host: 172.21.21.12
       ansible_user: root
