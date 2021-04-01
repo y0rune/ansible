@@ -1,7 +1,9 @@
 ---
 - hosts: all
+  vars:
+    server: "{{ ansible_eth0.ipv4.address }}"
   tasks:
-    - include_tasks: centos-enable-epal.yml
-    - include_tasks: check-iptables.yml
-    - include_tasks: centos-update.yml
-    - include_tasks: change-password.yml
+    - include_tasks: tasks/centos-enable-epal.yml
+    - include_tasks: tasks/check-iptables.yml
+    - include_tasks: tasks/centos-update.yml
+    - include_tasks: tasks/change-password.yml

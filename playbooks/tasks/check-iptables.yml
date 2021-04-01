@@ -1,0 +1,19 @@
+---
+  - name: Enable EPEL Repository on CentOS 8
+    dnf:
+      name: iptables-services
+      state: latest
+    become: True
+    when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] == '8'
+  - name: Enable EPEL Repository on CentOS 7
+    yum:
+      name: iptables-services
+      state: latest
+    become: True
+    when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] == '7'
+  - name: Enable EPEL Repository on CentOS 6
+    yum:
+      name: iptables-services
+      state: latest
+      become: True
+    when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] == '6'
